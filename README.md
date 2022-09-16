@@ -57,7 +57,7 @@ immediately but will not be run until initialized by the application. Modules th
 initialized independently should be placed in `<fjs-cache>`, while modules that are primarily intended to be used to
 compartmentalize application-wide code and style should be placed in `<fjs-loaded-modules>`.
 
-#### Custom Elements
+#### Controller Classes
 
 If defining the application using the controller classes, the application is defined by creating an instance of the
 `FrameJSApp` class, using the desired app name as the single argument to the constructor. If a `<fjs-app>` element already
