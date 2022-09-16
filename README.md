@@ -60,28 +60,28 @@ compartmentalize application-wide code and style should be placed in `<fjs-loade
 #### Custom Elements
 
 If defining the application using the controller classes, the application is defined by creating an instance of the
-FrameJSApp class, using the desired app name as the single argument to the constructor. If a `<fjs-app>` element already
-exists in the DOM with the given name, this element will be associated with the FrameJSApp instance. Otherwise, a new
+`FrameJSApp` class, using the desired app name as the single argument to the constructor. If a `<fjs-app>` element already
+exists in the DOM with the given name, this element will be associated with the `FrameJSApp` instance. Otherwise, a new
 `<fjs-app>` element will be created with the given name; this will need to be added to the DOM in order to initialize the
-application. This element (of class FrameJSAppElement) can be accessed through the FrameJSApp.rootElement property.
+application. This element (of class `FrameJSAppElement`) can be accessed through the `FrameJSApp.rootElement` property.
 
-The configuration of this application is specified in the FrameJSApp.config property, which is an object containing
+The configuration of this application is specified in the `FrameJSApp.config` property, which is an object containing
 the configuration directives as they would be defined in an external JSON file. (Such a file can be used instead by
-calling the FrameJSApp.config.fromFile() method using the path to the file as the argument.) Modules and pages can
+calling the `FrameJSApp.config.fromFile()` method using the path to the file as the argument.) Modules and pages can
 be defined by creating instances of the FrameJSModule and FrameJSPage classes, respectively, and added to the application
-using either the FrameJSApp.loadModule() or FrameJSApp.addToCache() methods, depending on whether the module should
+using either the `FrameJSApp.loadModule()` or `FrameJSApp.addToCache()` methods, depending on whether the module should
 be loaded immediately or not. (FrameJSPage instances can only be added with the latter.) Modules and pages can also
 be autoloaded en masse by referencing them in an external JSON file and specifying the path to this file as the argument
-to the FrameJSApp.autoload() method, in a `<fjs-property name="autoload">` element in the `<fjs-config>` element, or as an
+to the `FrameJSApp.autoload()` method, in a `<fjs-property name="autoload">` element in the `<fjs-config>` element, or as an
 autoload property in an external JSON configuration file.
 
 The FrameJSApp class also provides methods for loading and unloading modules and pages, as well as for navigating
-between pages. FrameJSApp.back() and FrameJSApp.forward() can be used as functional equivalents for the browser's
-back and forward buttons, respectively. The FrameJSApp.navigate() method can be used to navigate to a specific page
-or module identified by name, and the FrameJSApp.reload() method can be used to reload the current page or module.
-The FrameJSApp.loadModule() and FrameJSApp.unloadModule() methods can be used to load and unload modules that are
-not part of the navigation flow. The FrameJSApp.addToCache() and FrameJSApp.removeFromCache() methods can be used to
+between pages. `FrameJSApp.back()` and `FrameJSApp.forward()` can be used as functional equivalents for the browser's
+back and forward buttons, respectively. The `FrameJSApp.navigate()` method can be used to navigate to a specific page
+or module identified by name, and the `FrameJSApp.reload()` method can be used to reload the current page or module.
+The `FrameJSApp.loadModule()` and `FrameJSApp.unloadModule()` methods can be used to load and unload modules that are
+not part of the navigation flow. The `FrameJSApp.addToCache()` and `FrameJSApp.removeFromCache()` methods can be used to
 add and remove modules or pages from the cache, respectively. (Note: removing a module or page from the cache will
-not unload it if it is currently loaded. To unload a module or page, use the FrameJSApp.unloadModule() method, or
-the equivalent unload() method on the FrameJSModule or FrameJSPage instance.)
+not unload it if it is currently loaded. To unload a module or page, use the `FrameJSApp.unloadModule()` method, or
+the equivalent `unload()` method on the `FrameJSModule` or `FrameJSPage` instance.)
 
