@@ -20,11 +20,10 @@ they need.
 
 If defining the application using the custom elements, the application is defined by creating a `<fjs-app>` element
 for the application, with a name attribute specified to identify the application. The configuration of the application
-is specified by creating a `<fjs-config>` element as a child of the `<fjs-app>` element. This element must have a slot
-attribute set to "configuration". Within this element, configuration details can either be provided through `<fjs-property>`
-elements representing named directives or by specifying the same directives in an external JSON file and referencing
-this file in the src attribute of a `<fjs-configfile>` element. The `<fjs-property>` elements can be used to override the
-values specified in the external configuration file.
+is specified by creating a `<fjs-config>` element as a child of the `<fjs-app>` element. Within this element, configuration
+details can either be provided through `<fjs-property>` elements representing named directives or by specifying the same
+directives in an external JSON file and referencing this file in the src attribute of a `<fjs-configfile>` element. The
+`<fjs-property>` elements can be used to override the values specified in the external configuration file.
 
 The `<fjs-app>` element can also contain a `<fjs-frame>` element in which the application's content frame can be defined.
 This content frame will remain on-screen while the application is running, and all pages will be loaded within a
