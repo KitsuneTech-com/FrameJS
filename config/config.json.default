@@ -1,0 +1,6 @@
+{
+    "pagesDir": "/pages",
+    "modulesDir": "/modules",
+    "disableClientDirectives": false,
+    "useTransitions": true
+}
