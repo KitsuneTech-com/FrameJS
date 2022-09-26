@@ -1,7 +1,7 @@
 # FrameJS
 ## ES6 custom-element-based SPA framework
 
-## Version: 2.0 (alpha)
+## Version: 2.0 (alpha) **Testing only - not suitable for production use**
 
 ### Overview
 
